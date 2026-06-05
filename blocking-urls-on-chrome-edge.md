@@ -30,17 +30,17 @@ applications, URLs, domains, or IP addresses.
 
 #### Indicator
 
-<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/1.png" alt="Indicator 1">
-<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/2.png" alt="Indicator 2">
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/1.png" alt="Indicator 1" style="border: 1px solid #ccc; border-radius: 4px;">
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/2.png" alt="Indicator 2" style="border: 1px solid #ccc; border-radius: 4px;">
 
 #### Web Content Filtering
 
-<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/3.png" alt="Indicator 1">
-<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/4.png" alt="Indicator 1">
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/3.png" alt="Indicator 1" style="border: 1px solid #ccc; border-radius: 4px;">
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/4.png" alt="Indicator 1" style="border: 1px solid #ccc; border-radius: 4px;">
 
 #### Cloud Apps
 
-<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/5.png" alt="Indicator 1">
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/5.png" alt="Indicator 1" style="border: 1px solid #ccc; border-radius: 4px;">
 
 ### Using Microsoft Intune
 
@@ -50,7 +50,7 @@ With Devices → Configuration → Policies, you can block users from accessing 
 > you must enable network protection. See:
 > [Enable Network Protection](https://learn.microsoft.com/en-us/defender-endpoint/network-protection)
 
-<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/6.png" alt="Indicator 1">
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/6.png" alt="Indicator 1" style="border: 1px solid #ccc; border-radius: 4px;">
 
 ## User-based
 
