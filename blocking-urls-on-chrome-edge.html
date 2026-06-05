@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PenguinSecQ - CyberSecurity Blog</title>
+    <style>
+        /* ==========================================
+           1. CORE LAYOUT & STRUCTURE
+           ========================================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #171717;
+            line-height: 1.6;
+            padding: 24px 16px;
+        }
+        
+        /* Master Grid Layout: Content + Right Sidebar */
+        .blog-wrapper {
+            max-width: 1250px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 340px; /* Main body + DEV.to style right pane */
+            gap: 24px;
+            align-items: start;
+        }
+
+        /* Container styling for both Main Content and Sidebar Cards */
+        .main-content-card, .sidebar-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Top Decorative Accent Bars */
+        .color-accent-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #1E90FF 0%, #00BFFF 50%, #4682B4 100%);
+        }
+        .profile-accent-bar {
+            height: 12px;
+            background-color: #1E90FF; /* Primary Dodger Blue Card Header */
+        }
+
+        /* Main Content Inner Padding */
+        .blog-content {
+            padding: 40px;
+        }
+
+        /* ==========================================
+           2. MAIN BODY CONTENT TYPOGRAPHY & HEADER
+           ========================================== */
+        header { margin-bottom: 35px; }
+        
+        /* New Author Meta Header Block Above Title */
+        .article-meta-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .meta-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1E90FF, #4682B4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+        .meta-text-block {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.4;
+        }
+        .meta-author-name {
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 1rem;
+        }
+        .meta-publish-date {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        h1.article-title {
+            font-size: 2.6rem;
+            font-weight: 800;
+            line-height: 1.25;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+        .tag-list { display: flex; gap: 12px; flex-wrap: wrap; }
+        .blog-tag {
+            background-color: #f1f5f9;
+            color: #4682B4; /* Steel Blue */
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .blog-tag:hover {
+            background-color: #1E90FF;
+            color: #ffffff;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 40px;
+            margin-bottom: 18px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+        p { margin-bottom: 22px; color: #334155; font-size: 1.1rem; }
+        ul { margin-left: 26px; margin-bottom: 22px; color: #334155; font-size: 1.1rem; }
+        li { margin-bottom: 8px; }
+        
+        /* Inline code and Code Blocks */
+        code:not(pre code) {
+            font-family: ui-monospace, Consolas, monospace;
+            background-color: #f1f5f9;
+            color: #0f172a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        pre {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: ui-monospace, Consolas, monospace;
+            font-size: 0.95rem;
+            margin: 25px 0;
+            border-top: 3px solid #4682B4; /* Steel Blue Accent */
+        }
+
+        /* Info Box */
+        .callout-panel {
+            background-color: #f8fafc;
+            border-left: 5px solid #1E90FF;
+            padding: 24px;
+            border-radius: 0 6px 6px 0;
+            margin: 30px 0;
+        }
+        .callout-panel h4 { color: #1E90FF; margin-bottom: 8px; font-weight: 700; }
+
+        /* ==========================================
+           ELEMENT CORRECTIONS (TABLES, IMAGES, QUOTES)
+           ========================================== */
+        
+        /* 1. Responsive & Beautiful Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #f1f5f9;
+            color: #1e293b;
+            text-align: left;
+            font-weight: 700;
+            padding: 12px 16px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            vertical-align: top;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* 2. Responsive Images with Layout Spacing */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 16px 0 24px 0;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* 3. Sleek Blockquote styling */
+        blockquote {
+            background-color: #fffbeb; /* Light amber warning tint */
+            border-left: 4px solid #f59e0b; /* Amber accent bar */
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        blockquote p, blockquote {
+            color: #b45309; /* Dark amber text */
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* ==========================================
+           3. RIGHT SIDEBAR STYLES
+           ========================================== */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .sidebar-card {
+            background: #ffffff;
+        }
+        .card-body {
+            padding: 24px;
+        }
+
+        /* Profile Specific Styles */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: -12px; /* Pulls slightly up towards the accent bar */
+            margin-bottom: 16px;
+        }
+        .profile-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1E90FF, #4682B4); /* Matches the author avatar gradient */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem; /* Adjust text size slightly to match the look */
+        }
+        .profile-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .btn-follow {
+            display: block;
+            width: 100%;
+            background-color: #1E90FF; /* Dodger Blue Button */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: background 0.2s ease;
+        }
+        .btn-follow:hover {
+            background-color: #00BFFF; /* Deep Sky Blue Hover */
+        }
+        .profile-bio {
+            font-size: 0.95rem;
+            color: #475569;
+            margin-bottom: 20px;
+        }
+        .meta-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #64748b;
+            margin-top: 14px;
+        }
+        .meta-value {
+            font-size: 0.95rem;
+            color: #1e293b;
+        }
+
+        /* "More From" Feed Card Styles */
+        .feed-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            padding: 16px 20px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #1e293b;
+        }
+        .feed-title span {
+            color: #4682B4; /* Blue highlight on username */
+        }
+        .feed-item {
+            padding: 20px;
+            border-bottom: 1px solid #f1f5f9;
+            display: block;
+            text-decoration: none;
+            transition: background 0.15s ease;
+        }
+        .feed-item:last-child {
+            border-bottom: none;
+        }
+        .feed-item:hover {
+            background-color: #f8fafc;
+        }
+        .feed-item-heading {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #334155;
+            margin-bottom: 6px;
+            transition: color 0.2s ease;
+        }
+        .feed-item:hover .feed-item-heading {
+            color: #1E90FF; /* Text changes to Dodger Blue on hover */
+        }
+        .feed-item-tags {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        /* ==========================================
+           4. FOOTER & RESPONSIVENESS
+           ========================================== */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #64748b;
+            font-size: 0.9rem;
+            grid-column: span 2;
+        }
+
+        /* Collapse layout on tablets and mobile screens */
+        @media(max-width: 960px) {
+            .blog-wrapper {
+                grid-template-columns: 1fr; /* Switch to single column stack */
+            }
+            .blog-content { padding: 24px; }
+            h1.article-title { font-size: 2rem; }
+            footer { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blog-wrapper">
+        
+        <main class="main-content-card">
+            <div class="color-accent-bar"></div>
+            <article class="blog-content">
+                <header>
+                    <div class="article-meta-header">
+                        <div class="meta-avatar">SS</div>
+                        <div class="meta-text-block">
+                            <span class="meta-author-name">Penquinsecq</span>
+                            <span class="meta-publish-date">Posted on March 26, 2026</span>
+                        </div>
+                    </div>
+
+                    <h1 class="article-title">Blocking Specific URLs in MS365</h1>
+                    <div class="tag-list">
+                        <a href="#" class="blog-tag">#powershell</a>
+                        <a href="#" class="blog-tag">#security</a>
+                        <a href="#" class="blog-tag">#compliance</a>
+                    </div>
+                </header>
+
+                <p>This is my summary experience for blocking specific URLs in MS365.</p>
+
+<p>
+The first thing you need to decide is the most suitable method for your environment.
+There are two main approaches:
+</p>
+
+<ul>
+  <li>Device-based</li>
+  <li>User-based</li>
+</ul>
+
+<h2>Device-based</h2>
+
+<h3>Using Microsoft Defender for Endpoint (MDE)</h3>
+
+<p>
+With the following methods, you can block or allow any <strong>onboarded devices</strong> from accessing
+applications, URLs, domains, or IP addresses.
+</p>
+
+<ul>
+  <li>Web content filtering</li>
+  <li>Indicators</li>
+  <li>Cloud app catalog</li>
+</ul>
+
+<blockquote>
+  You may need the appropriate license to apply policies to specific devices.
+  Without it, policies may apply to all devices only.
+</blockquote>
+
+<h4>Indicator</h4>
+<img src="../images/1.png" alt="Indicator 1">
+<img src="../images/2.png" alt="Indicator 2">
+
+<h4>Web Content Filtering</h4>
+<img src="../images/3.png" alt="Web Filtering 1">
+<img src="../images/4.png" alt="Web Filtering 2">
+
+<h4>Cloud Apps</h4>
+<img src="../images/5.png" alt="Cloud Apps">
+
+<h3>Using Microsoft Intune</h3>
+
+<p>
+With Devices → Configuration → Policies, you can block users from accessing specific URLs in Chrome and Edge.
+</p>
+
+<blockquote>
+Third-party browsers can still bypass the blocking rules. If you want to block them,
+you must enable network protection. See:
+<a href="https://learn.microsoft.com/en-us/defender-endpoint/network-protection" target="_blank">
+Enable Network Protection
+</a>
+</blockquote>
+
+<img src="../images/6.png" alt="Intune Policy">
+
+<h2>User-based</h2>
+
+<p>
+To block or allow specific URLs based on user accounts, you need to use
+<strong>Global Secure Access</strong> with Conditional Access policies.
+</p>
+
+<blockquote>
+For setup guidance, see:
+<a href="https://learn.microsoft.com/en-us/entra/global-secure-access/how-to-configure-web-content-filtering?tabs=microsoft-entra-admin-center" target="_blank">
+How to configure Global Secure Access web content filtering
+</a>
+</blockquote>
+
+<h2>Filter Format used for URL list-based policies</h2>
+
+<table>
+  <tr>
+    <th>Syntax</th>
+    <th>Meaning</th>
+    <th>Example (will block)</th>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>Wildcard (any characters)</td>
+    <td>Anything</td>
+  </tr>
+  <tr>
+    <td>[*.]</td>
+    <td>All subdomains</td>
+    <td>
+      example.com<br>
+      www.example.com<br>
+      mail.example.com<br>
+      anything.example.com
+    </td>
+  </tr>
+  <tr>
+    <td><code>example.com</code></td>
+    <td>Exact domain</td>
+    <td>
+      http://example.com<br>
+      https://example.com
+    </td>
+  </tr>
+  <tr>
+    <td><code>example.com/path</code></td>
+    <td>Specific path</td>
+    <td>
+      https://example.com/path<br>
+      https://example.com/path/abc
+    </td>
+  </tr>
+  <tr>
+    <td>*://</td>
+    <td>Any protocol</td>
+    <td>
+      ftp://example.com<br>
+      http://example.com
+    </td>
+  </tr>
+  <tr>
+    <td>badsite</td>
+    <td>Block keyword in URL</td>
+    <td>
+      https://abc.com/badsite<br>
+      https://badsite.com
+    </td>
+  </tr>
+</table>
+
+<h2>Reference</h2>
+
+<p>
+<a href="https://www.anoopcnair.com/block-urls-on-google-chrome-and-microsoft-edge/" target="_blank">
+https://www.anoopcnair.com/block-urls-on-google-chrome-and-microsoft-edge
+</a>
+<br>
+<a href="https://learn.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format" target="_blank">
+https://learn.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format
+</a>
+</p>
+
+                <div class="callout-panel">
+                    <h4>Execution Scope Reminder</h4>
+                    <p>Always review local execution restrictions before performing administrative infrastructure baseline testing queries.</p>
+                </div>
+
+                <h2>Technical Implementation</h2>
+                <p>You can run structural deployment loops cleanly without sacrificing readability parameters inside the code containers:</p>
+
+<pre><code># Check system auditing states
+Get-AuditPolicy -Target "Application"</code></pre>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            
+            <div class="sidebar-card">
+                <div class="profile-accent-bar"></div>
+                <div class="card-body">
+                    <div class="profile-header">
+                        <div class="profile-avatar">SS</div> 
+                        <div class="profile-name">ShadowStrike</div>
+                    </div>
+                    
+                    <a href="#" class="btn-follow">Follow</a>
+                    
+                    <div class="profile-bio">
+                        Digital Forensics Specialist & cyber security practitioner. I write about DFIR, mobile forensics, and security tooling.
+                    </div>
+                    
+                    <div class="meta-label">Location</div>
+                    <div class="meta-value">Perth, Australia</div>
+                    
+                    <div class="meta-label">Work</div>
+                    <div class="meta-value">Security Technician & Auditor</div>
+                    
+                    <div class="meta-label">Joined</div>
+                    <div class="meta-value">May 18, 2026</div>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <div class="feed-title">More from <span>ShadowStrike</span></div>
+                
+                <a href="#" class="feed-item">
+                    <div class="feed-item-heading">How to Build a HaveIBeenPwned Breach Auditor in Python</div>
+                    <div class="feed-item-tags">#python #security #cli</div>
+                </a>
+                
+                <a href="#" class="feed-item">
+                    <div class="feed-item-heading">Why Diff Tools Lie: Detecting Hidden File Changes with PowerShell Hash Verification</div>
+                    <div class="feed-item-tags">#powershell #security #devops</div>
+                </a>
+                
+                <a href="#" class="feed-item">
+                    <div class="feed-item-heading">Configuring Layer 2 Broadcast Storm Defenses on Network Switches</div>
+                    <div class="feed-item-tags">#networking #security #mikrotik</div>
+                </a>
+            </div>
+
+        </aside>
+
+        <footer>
+            <p>&copy; 2026 • Built with Custom DEV.to Left-Right Clean Split Architecture</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

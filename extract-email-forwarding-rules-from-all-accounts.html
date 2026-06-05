@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exchange Online Forwarding Guide</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+      color: #333;
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+    pre {
+      background: #f6f8fa;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      border: 1px solid #ddd;
+    }
+    code {
+      font-family: Consolas, monospace;
+    }
+    blockquote {
+      background: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 10px 15px;
+      margin: 20px 0;
+    }
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+    a {
+      color: #0366d6;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Extract-Email-Forwarding-rules-From-all-accounts</h1>
+  
+<h2>Install module</h2>
+<pre><code>Install-Module -Name ExchangeOnlineManagement</code></pre>
+
+<h2>Connect to Exchange Online</h2>
+<pre><code>Connect-ExchangeOnline</code></pre>
+
+<p>The following types of automatic forwarding are available in Microsoft 365:</p>
+
+<ul>
+  <li>
+    Users can configure 
+    <a href="https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59" target="_blank">
+      Inbox rules
+    </a> 
+    to automatically forward messages to external senders (deliberately or as a result of a compromised account).
+  </li>
+</ul>
+
+<h3>To list mailboxes that have forwarding enabled via Inbox Rules:</h3>
+<pre><code>PS C:\Users\Joe\Documents\Useful_PS_Scripts&gt; .\Get_InboxRule_forwarding.ps1</code></pre>
+
+<ul>
+  <li>
+    Admins can configure 
+    <a href="https://learn.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding" target="_blank">
+      mailbox forwarding
+    </a> 
+    (also known as <em>SMTP forwarding</em>) to automatically forward messages to external recipients. The admin can choose whether to forward messages, or keep copies of forwarded messages in the mailbox.
+  </li>
+</ul>
+
+<h3>To list all mailboxes with administrator-set forwarding:</h3>
+<pre><code>Get-Mailbox -ResultSize Unlimited |
+Where-Object { $_.ForwardingAddress -ne $null -or $_.ForwardingSMTPAddress -ne $null } |
+Select-Object DisplayName, UserPrincipalName, ForwardingAddress, ForwardingSMTPAddress, DeliverToMailboxAndForward</code></pre>
+
+<blockquote>
+  <strong>NOTE</strong>
+  <ul>
+    <li>Outbound spam policies aren't part of Standard or Strict preset security policies.</li>
+    <li>The <strong>Standard</strong> and <strong>Strict</strong> values indicate recommended values in the default or custom outbound spam policies.</li>
+  </ul>
+  <p>
+    <a href="https://learn.microsoft.com/en-us/defender-office-365/recommended-settings-for-eop-and-office365?view=o365-worldwide" target="_blank">
+      Learn more
+    </a>
+  </p>
+</blockquote>
+
+<blockquote>
+  <strong>NOTE</strong>
+  <ul>
+    <li>Disabling automatic forwarding disables Inbox rules (users) and mailbox forwarding (admins) to external addresses.</li>
+    <li>Forwarding between internal users is not affected by outbound spam filter policies.</li>
+  </ul>
+  <p>
+    <a href="https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding" target="_blank">
+      Learn more
+    </a>
+  </p>
+</blockquote>
+
+</body>
+</html>
