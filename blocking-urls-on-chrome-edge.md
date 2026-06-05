@@ -30,7 +30,7 @@ applications, URLs, domains, or IP addresses.
 
 #### Indicator
 
-<img src="../images/1.png" alt="Indicator 1" style="border: 1px solid #ccc; border-radius: 4px;">
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/1.png" alt="Indicator 1" style="border: 1px solid #ccc; border-radius: 4px;">
 <img src="../images/2.png" alt="Indicator 2" style="border: 1px solid #ccc; border-radius: 4px;">
 
 #### Web Content Filtering
