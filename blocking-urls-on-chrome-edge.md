@@ -65,7 +65,7 @@ To block or allow specific URLs based on user accounts, you need to use
 | Syntax | Meaning | Example (will block) |
 |---|---|---|
 | * | Wildcard (any characters) | Anything |
-| [*.] | All subdomains | example.com<br>
+| [*.]<br> | All subdomains<br> | example.com<br>
                           www.example.com<br>
                           mail.example.com<br>
                           anything.example.com |
