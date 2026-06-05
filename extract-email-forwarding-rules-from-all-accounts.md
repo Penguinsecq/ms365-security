@@ -18,6 +18,7 @@ The following types of automatic forwarding are available in Microsoft 365:
 
 ### To list mailboxes that have forwarding enabled via Inbox Rules:
 ```
+#Script here
 $results = @()
 
 Get-Mailbox -ResultSize Unlimited | ForEach-Object {
