@@ -48,6 +48,7 @@ $results | Format-Table -AutoSize
 $results | Export-Csv -Path "ForwardingRules.csv" -NoTypeInformation
 ```
 
+Example Command
 ```
 PS C:\Users\JJJ\Documents\Useful_PS_Scripts> .\Get_InboxRule_forwarding.ps1
 ```
