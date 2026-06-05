@@ -17,6 +17,35 @@ The following types of automatic forwarding are available in Microsoft 365:
 - Users can configure [Inbox rules](https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59) to automatically forward messages to external senders (deliberately or as a result of a compromised account).
 
 ### To list mailboxes that have forwarding enabled via Inbox Rules:
+```
+$results = @()
+
+Get-Mailbox -ResultSize Unlimited | ForEach-Object {
+    $mailbox = $_
+    $rules = Get-InboxRule -Mailbox $mailbox.UserPrincipalName -ErrorAction SilentlyContinue
+
+    $forwardingRules = $rules | Where-Object {
+        $_.ForwardTo -ne $null -or
+        $_.ForwardAsAttachmentTo -ne $null -or
+        $_.RedirectTo -ne $null
+    }
+
+    foreach ($rule in $forwardingRules) {
+        $results += [PSCustomObject]@{
+            Mailbox       = $mailbox.UserPrincipalName
+            RuleName      = $rule.Name
+            Enabled       = $rule.Enabled
+            ForwardTo     = ($rule.ForwardTo -join ", ")
+            ForwardAsAtt  = ($rule.ForwardAsAttachmentTo -join ", ")
+            RedirectTo    = ($rule.RedirectTo -join ", ")
+        }
+    }
+}
+
+$results | Format-Table -AutoSize
+
+$results | Export-Csv -Path "ForwardingRules.csv" -NoTypeInformation
+```
 
 ```
 PS C:\Users\JJJ\Documents\Useful_PS_Scripts> .\Get_InboxRule_forwarding.ps1
