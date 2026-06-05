@@ -31,7 +31,6 @@ applications, URLs, domains, or IP addresses.
 #### Indicator
 
 | |
-|---|
 | ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/1.png) |
 
 | |
