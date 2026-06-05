@@ -75,6 +75,6 @@ Select-Object DisplayName, UserPrincipalName, ForwardingAddress, ForwardingSMTPA
 >
 > [Learn more](https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding)
 >
-> ## Reference
-> https://learn.microsoft.com/en-us/defender-office-365/recommended-settings-for-eop-and-office365?view=o365-worldwide
-> https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding
+## Reference
+https://learn.microsoft.com/en-us/defender-office-365/recommended-settings-for-eop-and-office365?view=o365-worldwide
+https://learn.microsoft.com/en-us/defender-office-365/outbound-spam-policies-external-email-forwarding
