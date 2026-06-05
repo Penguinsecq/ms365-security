@@ -30,8 +30,8 @@ applications, URLs, domains, or IP addresses.
 
 #### Indicator
 
-![Indicator 1](../images/1.png)
-![Indicator 2](../images/2.png)
+<img src="../images/1.png" alt="Indicator 1">
+<img src="../images/2.png" alt="Indicator 2">
 
 #### Web Content Filtering
 
