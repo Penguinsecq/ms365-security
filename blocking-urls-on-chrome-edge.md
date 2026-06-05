@@ -65,7 +65,10 @@ To block or allow specific URLs based on user accounts, you need to use
 | Syntax | Meaning | Example (will block) |
 |---|---|---|
 | * | Wildcard (any characters) | Anything |
-| [*.] | All subdomains | example.com, www.example.com\ mail.example.com\ anything.example.com\ |
+| [*.] | All subdomains | example.com  
+                          www.example.com  
+                          mail.example.com  
+                          anything.example.com\ |
 | `example.com` | Exact domain | http://example.com, https://example.com |
 | `example.com/path` | Specific path | https://example.com/path, https://example.com/path/abc |
 | *:// | Any protocol | ftp://example.com, http://example.com |
