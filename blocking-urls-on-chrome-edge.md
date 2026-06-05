@@ -31,16 +31,16 @@ applications, URLs, domains, or IP addresses.
 #### Indicator
 
 <img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/1.png" alt="Indicator 1">
-<img src="../images/2.png" alt="Indicator 2">
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/2.png" alt="Indicator 2">
 
 #### Web Content Filtering
 
-![Web Filtering 1](../images/3.png)
-![Web Filtering 2](../images/4.png)
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/3.png" alt="Indicator 1">
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/4.png" alt="Indicator 1">
 
 #### Cloud Apps
 
-![Cloud Apps](../images/5.png)
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/5.png" alt="Indicator 1">
 
 ### Using Microsoft Intune
 
@@ -50,7 +50,7 @@ With Devices → Configuration → Policies, you can block users from accessing 
 > you must enable network protection. See:
 > [Enable Network Protection](https://learn.microsoft.com/en-us/defender-endpoint/network-protection)
 
-![Intune Policy](../images/6.png)
+<img src="https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/6.png" alt="Indicator 1">
 
 ## User-based
 
