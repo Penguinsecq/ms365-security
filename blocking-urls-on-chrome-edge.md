@@ -30,29 +30,29 @@ applications, URLs, domains, or IP addresses.
 
 #### Indicator
 
-|Indicator |
+|Indicator 1|
 |---|
 | ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/1.png) |
 
-| |
+|Indicator 2|
 |---|
 | ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/2.png) |
 
 #### Web Content Filtering
 
-| |
+|Web Content Filtering 1|
 |---|
-| ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/3.png) |
+| ![Web Content Filtering 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/3.png) |
 
-| |
+|Web Content Filtering 2|
 |---|
-| ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/4.png) |
+| ![Web Content Filtering 2](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/4.png) |
 
 #### Cloud Apps
 
-| |
+|Cloud Apps 1|
 |---|
-| ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/5.png) |
+| ![Cloud Apps 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/5.png) |
 
 ### Using Microsoft Intune
 
@@ -62,9 +62,9 @@ With Devices → Configuration → Policies, you can block users from accessing 
 > you must enable network protection. See:
 > [Enable Network Protection](https://learn.microsoft.com/en-us/defender-endpoint/network-protection)
 
-| |
+|MS Intune 1 |
 |---|
-| ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/6.png) |
+| ![Intune 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/6.png) |
 
 ## User-based
 
