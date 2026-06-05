@@ -2,7 +2,7 @@
 
 *Posted on March 26, 2026*
 
-Tags: `#powershell` `#security` `#compliance`
+Tags: `#ms365` `#security` `#web-filtering`
 
 ---
 
