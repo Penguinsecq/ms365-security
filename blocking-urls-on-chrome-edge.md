@@ -36,23 +36,23 @@ applications, URLs, domains, or IP addresses.
 
 | |
 |---|
-| ![Indicator 2](../images/2.png) |
+| ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/2.png) |
 
 #### Web Content Filtering
 
 | |
 |---|
-| ![Web Filtering 1](../images/3.png) |
+| ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/3.png) |
 
 | |
 |---|
-| ![Web Filtering 2](../images/4.png) |
+| ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/4.png) |
 
 #### Cloud Apps
 
 | |
 |---|
-| ![Cloud Apps](../images/5.png) |
+| ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/5.png) |
 
 ### Using Microsoft Intune
 
@@ -64,7 +64,7 @@ With Devices → Configuration → Policies, you can block users from accessing 
 
 | |
 |---|
-| ![Intune Policy](../images/6.png) |
+| ![Indicator 1](https://github.com/Penguinsecq/penguinsecq.github.io/raw/main/docs/images/6.png) |
 
 ## User-based
 
