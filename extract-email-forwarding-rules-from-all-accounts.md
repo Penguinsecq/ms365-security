@@ -19,7 +19,7 @@ The following types of automatic forwarding are available in Microsoft 365:
 ### To list mailboxes that have forwarding enabled via Inbox Rules:
 
 ```
-PS C:\Users\Joe\Documents\Useful_PS_Scripts> .\Get_InboxRule_forwarding.ps1
+PS C:\Users\JJJ\Documents\Useful_PS_Scripts> .\Get_InboxRule_forwarding.ps1
 ```
 
 - Admins can configure [mailbox forwarding](https://learn.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-user-mailboxes/configure-email-forwarding) (also known as *SMTP forwarding*) to automatically forward messages to external recipients. The admin can choose whether to forward messages, or keep copies of forwarded messages in the mailbox.
