@@ -1,9 +1,9 @@
-**Microsoft Intune Command Quick Reference**
+#Microsoft Intune Command Quick Reference
 
-dsregcmd /status 
+###dsregcmd /status 
 Verifies current registration state with Microsoft Entra ID, validates tenant details, and confirms Primary Refresh Token (PRT) presence.
 
-dsregcmd /refreshprt 
+###dsregcmd /refreshprt 
 Forces an immediate PRT renewal from Entra ID to resolve Single Sign-On (SSO) latency and Conditional Access compliance state issues without requiring a full user logoff.
 
 Restart-Service IntuneManagementExtension 
