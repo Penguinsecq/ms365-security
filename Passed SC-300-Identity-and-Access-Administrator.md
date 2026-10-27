@@ -13,7 +13,7 @@ Personally, I have 3.5 years experience working in MS365 admin center, Entra ID,
 **Passing score**: 700 out of 1000.
 
 ## My Preparation
-1. Official study guide: https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-300
+1. [Official study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-300)
 2. Official Microsoft Learn SC-300: https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator
 3. Lab tenant. I spin up a trial tenant with Entra ID P2 and Entra Suite for free. Just follow the official MS learning, it will guide you how to get the free trial.
 4. Claude, ChatGPT and Gemini. I used AI to help me summarise and explain more detail for any topics that I could not understand. They also can help generating questions for practicing.
