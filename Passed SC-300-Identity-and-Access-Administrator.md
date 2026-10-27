@@ -7,7 +7,7 @@ In cyber security world nowadays, one of the most important thing is "Identity".
 
 Personally, I have 3.5 years experience working in MS365 admin center, Entra ID, Defender, Exchange, Intune, Purview, etc. I always have to create, make changes, delete, assign user accounts, groups, conditional access policy, Enterprise application, etc. I have passed and earned Microsoft Applied Skills in Identities and access using Microsoft Entra before.
 
-## Exam details** (please check the official exam page for current details at the time you take the exam)
+## Exam details (please check the official exam page for current details at the time you take the exam)
 **Price**: 165 USD in the USA at the time I checked, pricing varies by country or region. I'm not in USA and also, I luckily received free exam voucher from Microsoft AI Skills fest event.
 **Duration**: 100 minutes at the time I checked, excluding any additional check-in or admin procedures.
 **Passing score**: 700 out of 1000.
