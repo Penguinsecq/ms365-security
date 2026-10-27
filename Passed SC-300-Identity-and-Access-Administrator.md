@@ -10,7 +10,7 @@ Personally, I have 3.5 years experience working in MS365 admin center, Entra ID,
 **Exam details**
 **Price**: 165 USD if you are in USA. (I'm not in US) and also, I luckily received free exam voucher from Microsoft AI Skills fest event.
 **Duration**: 100 minutes plus 20 minutes for other exam procedures.
-**No. of Questions**: I got 60 questions, 7 of which were case study questions hat came first, followed by 53 regular questions.
+**No. of Questions**: I got 60 questions.
 **Passing score**: 700 out of 1000.
 
 **My Preparation**
@@ -18,6 +18,12 @@ Personally, I have 3.5 years experience working in MS365 admin center, Entra ID,
 2. Official Microsoft Learn SC-300: https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator
 3. Lab tenant. I spin up a trial tenant with Entra ID P2 and Entra Suite for free. Just follow the official MS learning, it will guide you how to get the free trial.
 4. Claude, ChatGPT and Gemini. I use AI to help me summarise and explain more detail for any topics that I could not understand. They also can help generating questions for practicing.
+5. Microsoft SC-300 course on Youtube: https://www.youtube.com/playlist?list=PLahhVEj9XNTf6lWUbZLBNULQ7uVqM5Sad
 
 **Exam Day**
-As this is my first time taking exam in overseas, I arrived exam center 30 minutes before the actual exam time, just want to be prepared for everything such as wearing heat-tech, go to toilet and drinking a bit water. I found that the exam center is very professional here. 
+As this was the first time taking exam in overseas, I arrived exam center 30 minutes before the actual exam time, just want to be prepared for everything such as wearing heat-tech, went to toilet and drinking a glass of water because you can bring only your id card, no mobile phone, or debit card. 
+
+During the exam, 
+I got seven case study questions first which made me feel so nervous. I tried to read all information and answer them carefully which took me around 30 minutes. Followed with regular questions, many questions are quite long, I skipped all the long questions, marked them to be reviewed later. Once, I got all short questions done, I came back and did them. **I would say that time management is very important in this exam**. I completed all question in 99 minutes. One thing that you should know is, in the exam you can utilise MS Learn, it was very helpful and I use it for a few questions, however there is limitation, you can't search anything like you did at home. I dedicate some time to see how to search and what is the result coming up. However, I would not suggest you to use it for all questions, as said, be careful with time management.
+
+I found so many questions about identity management (yes, of course) of hybrid environment, workload identity, key vault, VM, access packages, SaaS apps that I don't have experience in real life, please
